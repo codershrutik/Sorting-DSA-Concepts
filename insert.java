@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class insert {
     public static void main(String[] args) {
-        int[] arr= {4,5,1,2,3};
+        int[] arr= {5,4,3,2,1};
         insertion(arr);
         System.out.println(Arrays.toString(arr));
     }
