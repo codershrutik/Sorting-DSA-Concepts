@@ -3,26 +3,21 @@ import java.util.Arrays;
 
 public class main {
     public static void main(String[] args) {
-        int[] arr = {3,1,5,4,2};
-        bubble(arr);
-        System.out.println(Arrays.toString(arr));
+        int[] nums = {3,1,5,4,2};
+        bubble(nums);
+        System.out.println(Arrays.toString(nums));
     }
 
-    static void bubble(int[] arr){
-        boolean swapped;
-        for(int i=0;i<arr.length;i++){
-            swapped = false;
-            for(int j=1;j<arr.length-1;j++){
-                if(arr[j]<arr[j-1]){
-                    int temp = arr[j];
-                    arr[j] = arr[j-1];
-                    arr[j-1] = temp;
-                    swapped = true;
+    static void bubble(int[] nums){
+        int n = nums.length;
+        for(int i=0;i<nums.length;i++){
+            for(int j=0;j<nums.length-i-1;j++){
+                if(nums[j]>nums[j+1]){
+                    int temp = nums[j];
+                    nums[j] = nums[j+1];
+                    nums[j+1] = temp;
                 }
             }
-            if(!swapped){
-                break;
-            }
+        }
         }
     }
-}
